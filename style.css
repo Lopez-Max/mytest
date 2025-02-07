@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f8ff;
+}
+
+.flower {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transition: transform 1s ease-in-out;
+}
+
+.petal {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  background-color: #ff69b4;
+  border-radius: 50px 50px 0 0;
+  transform-origin: bottom center;
+  transition: transform 1s ease-in-out;
+}
+
+.center {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #ffd700;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Initial position of petals */
+.flower .petal:nth-child(1) { transform: rotate(0deg); }
+.flower .petal:nth-child(2) { transform: rotate(60deg); }
+.flower .petal:nth-child(3) { transform: rotate(120deg); }
+.flower .petal:nth-child(4) { transform: rotate(180deg); }
+.flower .petal:nth-child(5) { transform: rotate(240deg); }
+.flower .petal:nth-child(6) { transform: rotate(300deg); }
+
+/* Blooming effect on hover */
+.flower.bloom .petal:nth-child(1) { transform: rotate(0deg) translateY(-50px); }
+.flower.bloom .petal:nth-child(2) { transform: rotate(60deg) translateY(-50px); }
+.flower.bloom .petal:nth-child(3) { transform: rotate(120deg) translateY(-50px); }
+.flower.bloom .petal:nth-child(4) { transform: rotate(180deg) translateY(-50px); }
+.flower.bloom .petal:nth-child(5) { transform: rotate(240deg) translateY(-50px); }
+.flower.bloom .petal:nth-child(6) { transform: rotate(300deg) translateY(-50px); }
